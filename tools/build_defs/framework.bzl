@@ -188,6 +188,7 @@ def cc_external_rule_impl(ctx, attrs):
         "set_platform_env_vars",
         "export EXT_BUILD_ROOT=$BUILD_PWD",
         "path $EXT_BUILD_ROOT",
+        "mkdir -p $TMPDIR",
         "export BUILD_TMPDIR=$(mktemp -d)",
         "export EXT_BUILD_DEPS=$EXT_BUILD_ROOT/bazel_foreign_cc_deps_" + lib_name,
         "mkdir -p $EXT_BUILD_DEPS",

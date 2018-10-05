@@ -48,8 +48,8 @@ def _create_os_description(rctx, os_name):
 
 def _shell_utils_text(rctx, host_os):
     utils_name = "utils_unix.sh"
-    if host_os.is_osx:
-        utils_name = "utils_osx.sh"
+    #if host_os.is_osx:
+    #    utils_name = "utils_osx.sh"
     if host_os.is_win:
         utils_name = "utils_win.sh"
 
